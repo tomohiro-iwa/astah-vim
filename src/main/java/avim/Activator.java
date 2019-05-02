@@ -1,4 +1,4 @@
-package avim;
+package main.java.avim;
 
 
 import org.osgi.framework.BundleActivator;
