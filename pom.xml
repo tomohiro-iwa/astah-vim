@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<properties>
 		<bundle.symbolicName>astah-vim.astah-vim</bundle.symbolicName>
-		<bundle.namespace>astah-vim</bundle.namespace>
+		<bundle.namespace>avim</bundle.namespace>
 		<plugin.install>true</plugin.install>
 		<astah.version>6.7</astah.version>
 		<astah.edition>all</astah.edition>

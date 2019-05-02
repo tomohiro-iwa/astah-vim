@@ -13,7 +13,7 @@
          <action
 			   label="%menu_label"
                icon="icons/sample.gif"
-               class="astah-vim.TemplateAction"
+               class="avim.TemplateAction"
                tooltip="%menu_tooltip"
                menubarPath="tool/astah-vim/"
                id="astah-vim">

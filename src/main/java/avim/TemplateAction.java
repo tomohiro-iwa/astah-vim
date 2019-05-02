@@ -1,4 +1,4 @@
-package astah-vim;
+package avim;
 
 
 import javax.swing.JOptionPane;

@@ -1,4 +1,4 @@
-package astah-vim;
+package avim;
 
 import static org.junit.Assert.*;
 
