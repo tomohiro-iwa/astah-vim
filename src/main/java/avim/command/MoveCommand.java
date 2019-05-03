@@ -1,4 +1,4 @@
-package main.java.avim.command;
+package avim.command;
 
 import java.util.Arrays;
 import java.util.List;

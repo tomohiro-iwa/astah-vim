@@ -1,4 +1,4 @@
-package main.java.avim;
+package avim;
 
 
 import java.awt.Dimension;
@@ -6,15 +6,11 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 
 import com.change_vision.jude.api.inf.AstahAPI;
 import com.change_vision.jude.api.inf.exception.ProjectNotFoundException;
 import com.change_vision.jude.api.inf.model.IDiagram;
 import com.change_vision.jude.api.inf.model.IMindMapDiagram;
-import com.change_vision.jude.api.inf.presentation.INodePresentation;
 import com.change_vision.jude.api.inf.presentation.IPresentation;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
 import com.change_vision.jude.api.inf.ui.IPluginActionDelegate;
@@ -57,6 +53,7 @@ public class TemplateAction implements IPluginActionDelegate {
                     "Alert", JOptionPane.ERROR_MESSAGE);
             throw new UnExpectedException();
         }
+        
         return null;
     }
 

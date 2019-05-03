@@ -1,4 +1,4 @@
-package main.java.avim.command;
+package avim.command;
 
 public interface ICommand {
 	public void excute() throws Exception;

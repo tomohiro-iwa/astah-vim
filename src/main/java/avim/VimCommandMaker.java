@@ -1,8 +1,8 @@
 // Dirty
-package main.java.avim;
+package avim;
 
-import main.java.avim.command.MoveCommand;
-import main.java.avim.command.ICommand;
+import avim.command.MoveCommand;
+import avim.command.ICommand;
 
 public class VimCommandMaker {
 	public enum VimMode{

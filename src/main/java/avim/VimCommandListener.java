@@ -1,11 +1,11 @@
-package main.java.avim;
+package avim;
 
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-import main.java.avim.command.ICommand;
+import avim.command.ICommand;
 
 public class VimCommandListener implements DocumentListener {
 	private JTextField textField = null;
@@ -44,14 +44,15 @@ public class VimCommandListener implements DocumentListener {
 		ICommand command = commandMaker.make(input);
 		if (command == null)
 		{
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				textField.setText("");
-			}
-		});
+
 		}else
 		{
 			command.excute();
+			SwingUtilities.invokeLater(new Runnable() {
+				public void run() {
+					textField.setText("");
+				}
+			});
 		}
 		
 	}
