@@ -19,14 +19,38 @@ public class MoveCommand implements ICommand{
 		AstahAPI api = AstahAPI.getAstahAPI();
 		IDiagramViewManager diagramView = api.getViewManager().getDiagramViewManager();
 		INodePresentation currentP = (INodePresentation) diagramView.getSelectedPresentations()[0];
+		INodePresentation nextP = null;
 		if(direction.equals("j"))
 		{
-			INodePresentation parentP = currentP.getParent();
+			nextP = (INodePresentation)getDownPresentation(currentP);
+		}
+		if(direction.equals("k"))
+		{
+			nextP = (INodePresentation)getUpPresentation(currentP);
+			
+		}
+		diagramView.select((IPresentation) nextP);
+	}
+	
+	private IPresentation getDownPresentation(IPresentation currentP) {
+		if (currentP instanceof INodePresentation) {
+			INodePresentation parentP = ((INodePresentation)currentP).getParent();
 			List<INodePresentation> childrenPs = Arrays.asList(parentP.getChildren());
 			int currentIndex = childrenPs.indexOf(currentP);
-			INodePresentation nextP = childrenPs.get(currentIndex+1);
-			diagramView.select((IPresentation) nextP);
+			INodePresentation nextP = childrenPs.get(currentIndex + 1);
+			return nextP;
 		}
+		return null;
+	}
+	private IPresentation getUpPresentation(IPresentation currentP) {
+		if (currentP instanceof INodePresentation) {
+			INodePresentation parentP = ((INodePresentation)currentP).getParent();
+			List<INodePresentation> childrenPs = Arrays.asList(parentP.getChildren());
+			int currentIndex = childrenPs.indexOf(currentP);
+			INodePresentation nextP = childrenPs.get(currentIndex - 1);
+			return nextP;
+		}
+		return null;
 	}
 
 }
